@@ -1,6 +1,5 @@
 package org.firstinspires.ftc.teamcode
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp
 import dev.nextftc.core.components.BindingsComponent
 import dev.nextftc.ftc.Gamepads
@@ -9,8 +8,7 @@ import dev.nextftc.ftc.components.BulkReadComponent
 import dev.nextftc.hardware.driving.MecanumDriverControlled
 import dev.nextftc.hardware.impl.MotorEx
 
-//@TeleOp
-@Disabled
+@TeleOp
 class TeleOpProgram : NextFTCOpMode() {
     init {
         addComponents(
@@ -19,8 +17,8 @@ class TeleOpProgram : NextFTCOpMode() {
     }
 
     // change the names and directions to suit your robot
-    private val frontLeftMotor = MotorEx("front_left").reversed()
-    private val frontRightMotor = MotorEx("front_right")
+    private val frontLeftMotor = MotorEx("front_left")
+    private val frontRightMotor = MotorEx("front_right").reversed()
     private val backLeftMotor = MotorEx("back_left").reversed()
     private val backRightMotor = MotorEx("back_right")
 
